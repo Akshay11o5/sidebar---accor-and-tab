@@ -17,6 +17,7 @@ section {
   right: 0;
   border: 2px solid black;
   z-index: 2;
+  transition: all 0.4s ease-in-out;
 }
 
 .sidebarm li {
@@ -29,6 +30,7 @@ section {
   color: rgb(23, 21, 21);
   padding: 1rem;
   position: fixed;
+  cursor: pointer;
 }
 
 .Iconbar :is(:hover, :active, :focus) {
@@ -44,8 +46,14 @@ section {
   transition: all 0.4s ease-in-out;
 }
 
+.xmarkIcon :is(:hover, :active, :focus) {
+  transform: scale(1.1);
+  transform: rotate(180deg);
+  transition: all 0.4s ease-in-out;
+}
+
 .blackdrop {
-  counter-reset: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -53,6 +61,13 @@ section {
   right: 0;
   cursor: pointer;
   z-index: 1;
+}
+
+.sidebarm li {
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-weight: 600;
 }
 
 /* -----------------------------ACCOR--------------------- */
@@ -63,13 +78,14 @@ section {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .accopcontaint {
   background-color: rgb(195, 232, 246);
   margin-bottom: 0;
   display: none;
-  border: 1px solid black;
+  border: 1px solid rgb(185, 234, 182);
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -77,6 +93,11 @@ section {
 h3 {
   color: gold;
   margin-bottom: 0;
+}
+
+h3.active {
+  background-color: green;
+  color: white;
 }
 
 .accopheading.active + .accopcontaint {
@@ -99,6 +120,16 @@ h2 {
   padding: 0;
   margin: 0;
   display: flex;
+}
+
+.tabheading .active {
+  background-color: green;
+  color: white;
+}
+
+.tabheading :is(:hover, :active, :focus) {
+  background-color: green;
+  color: white;
 }
 
 .tabheading li {
