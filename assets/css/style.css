@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(136, 217, 230);
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.Sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: rgb(236, 152, 155);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid black;
+  z-index: 2;
+}
+
+.sidebarm li {
+  list-style: none;
+}
+
+.Iconbar {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgb(23, 21, 21);
+  padding: 1rem;
+  position: fixed;
+}
+
+.Iconbar :is(:hover, :active, :focus) {
+  transform: scale(1.1);
+}
+
+.xmarkIcon {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgb(23, 21, 21);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.blackdrop {
+  counter-reset: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* -----------------------------ACCOR--------------------- */
+
+.accopheading {
+  background-color: black;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.accopcontaint {
+  background-color: rgb(195, 232, 246);
+  margin-bottom: 0;
+  display: none;
+  border: 1px solid black;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+h3 {
+  color: gold;
+  margin-bottom: 0;
+}
+
+.accopheading.active + .accopcontaint {
+  display: block;
+}
+
+/* ---------------------------------tab------------------------ */
+
+h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.tabheading {
+  list-style: none;
+  background-color: gold;
+  color: black;
+  border-radius: 0.5rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.tabheading li {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 30%;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.5rem;
+  border: 2px solid black;
+}
+
+.tabheading li:is(:active, :focus, :hover) .tabheading li.active {
+  background-color: rgb(12, 4, 73);
+  color: white;
+  border: 2px solid black;
+}
+
+.tabpanel {
+  display: none;
+}
+
+.tabpanel.active {
+  display: block;
+}
